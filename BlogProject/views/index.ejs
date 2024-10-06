@@ -1,0 +1,29 @@
+<%- include("partials/header.ejs") %>
+
+<% if(locals.BlogsTitle && locals.BlogIds){ %>
+    <div class="container blogs-section border-bottom">
+        <% for( let i = 0 ; i < BlogsTitle.length; i++){ %>
+            <ol>
+                <li value=<%= i+1 %>> <a href= <%= BlogIds[i] %>><%= BlogsTitle[i] %> </a> </li>
+            </ol>
+        <% } %>
+    </div>
+<% } %>
+<div class="container">
+    <h1>Add a Blog.</h1>
+    <form action="/submit" method="POST">
+        <div class="mb-3">
+            <label for="blog-title" class="form-label">Blog Title</label>
+            <input type="text" class="form-control" name="blog-title" required>
+          </div>
+        <div class="input-group">
+            <span class="input-group-text">Blog Body</span>
+            <textarea class="form-control" name="blog-body" aria-label="With textarea" required></textarea>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+</div>
+
+
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,21 @@
+body{
+    color: hotpink;
+    background: #222;
+}
+
+.MyBlogs{
+    color: hotpink;
+}
+
+.footer-fix{
+    background: hotpink;
+    
+}
+
+.fav-list-item{
+    padding-right: 20px;
+}
+
+.edit-btn, .delete-btn{
+    display: inline-grid;
+}
